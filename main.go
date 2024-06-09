@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/leosva90/GoCurso/ejercicios"
+	"github.com/leosva90/GoCurso/mapas"
 )
 
 func main() {
@@ -25,9 +23,25 @@ func main() {
 		fmt.Println("Esto es Darwin")
 	default:
 		fmt.Println("%s \n", os)
-	} */
+	}
 
 	numero, texto := ejercicios.ConvNumerico("500")
 	fmt.Println(numero)
 	fmt.Println(texto)
+
+	teclado.IngresoNumeros()
+
+	iteraciones.Iterar()*/
+
+	//fmt.Println(ejercicios.TabledeMultiplicar())
+
+	//files.GrabaTabla()
+
+	//files.SumaTabla()
+	//files.LeoArchivo()
+
+	//funciones.Exponencia(2)
+
+	//arreglos_slice.Capacidad()
+	mapas.MostrarMapas()
 }
