@@ -1,7 +1,9 @@
 package main
 
 import (
-	"github.com/leosva90/GoCurso/mapas"
+	"fmt"
+
+	"github.com/leosva90/GoCurso/goroutines"
 )
 
 func main() {
@@ -43,5 +45,20 @@ func main() {
 	//funciones.Exponencia(2)
 
 	//arreglos_slice.Capacidad()
-	mapas.MostrarMapas()
+	//mapas.MostrarMapas()
+	//users.AltaUsuario()
+
+	//Pedro := new(modelos.Hombre)
+	//e.HumanosRespirando(Pedro)
+
+	//defer_panic.EjemploPanic()
+
+	canal1 := make(chan bool)
+
+	go goroutines.MiNombreLento("Crash Overide", canal1)
+	defer func() {
+		<-canal1
+	}()
+	fmt.Println("Estoy aca")
+
 }
