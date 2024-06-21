@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/leosva90/GoCurso/goroutines"
+	"github.com/leosva90/GoCurso/middleware"
 )
 
 func main() {
@@ -53,12 +51,15 @@ func main() {
 
 	//defer_panic.EjemploPanic()
 
-	canal1 := make(chan bool)
+	/*canal1 := make(chan bool)
 
 	go goroutines.MiNombreLento("Crash Overide", canal1)
 	defer func() {
 		<-canal1
 	}()
-	fmt.Println("Estoy aca")
+	fmt.Println("Estoy aca")*/
+
+	//webserver.MiWebServer()
+	middleware.MiMiddleware()
 
 }
